@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body.container-fluid {
+  background-color: var(--bgMain) !important;
+}
+
+:root {
+  --bgMain: #fff5f7;
+  --textMain: #2b2b2b;
+  --textSoft: #ec4899;
+  --btnMain: #ec4899;
+  --btnText: #5e5e5e;
+  --btnBorder: #ff5c8a;
+  --shadowMain: 0px 0px 30px rgba(255, 92, 138, 0.25);
+  --shadowBtn: 0px 0px 30px rgba(255, 92, 138, 0.35);
+}
+
+body.dark-theme {
+  --bgMain: #0b0b0b;
+  --textMain: #ffffff;
+  --textSoft: #c9b36b;
+  --btnMain: #e6c35c;
+  --btnText: #a2a2a2;
+  --btnBorder: #d3da19;
+  --shadowMain: 0px 0px 30px #c9b36b;
+  --shadowBtn: 0px 0px 30px #c9b36b;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--bgMain);
+}
+
+#app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.theme-ready {
+  transition:
+    background-color 0.4s ease-in,
+    color 0.4s ease-out;
+}
+
+nav {
+  flex-shrink: 0;
+}
+
+.ay {
+  font-family: "Playwrite DE SAS", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: large;
+  color: var(--textMain);
+}
+
+.main {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+section.d-flex.justify-content-start.align-items-center {
+  flex-shrink: 0;
+  padding: 8px 12px;
+}
+
+#papa {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  padding: 32px;
+  border-radius: 24px;
+}
+
+.firstH {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--textMain);
+}
+
+.myName {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.1rem;
+  color: var(--textSoft);
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  padding: 12px 24px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.btnPrimary,
+.btnSecondary {
+  background-color: transparent;
+  color: var(--btnMain);
+  border: 1px solid var(--btnBorder);
+  box-shadow: var(--shadowBtn);
+}
+
+#gif img {
+  width: 160px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+#n.runaway {
+  position: absolute;
+  transition:
+    left 0.4s ease-out,
+    top 0.4s ease-out;
+}
+
+#musicToggle,
+#themeToggle {
+  font-size: 1.4rem;
+  color: var(--btnMain);
+  background: transparent;
+  border: none;
+}
+
+body.dark-theme #musicToggle,
+body.dark-theme #themeToggle {
+  color: #f5c542;
+}
+
+#themeToggle i {
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+#themeToggle:hover i {
+  transform: rotate(15deg) scale(1.1);
+}
+
+footer {
+  position: relative;
+  width: 100%;
+}
+
+footer p {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.mnl {
+  color: var(--btnText);
+}
+
+@media (min-width: 576px) {
+  #gif img {
+    width: 180px;
+  }
+
+  .firstH {
+    font-size: 1.8rem;
+  }
+
+  .myName {
+    font-size: 1.2rem;
+  }
+
+  button {
+    width: auto;
+    margin: 0 8px;
+  }
+}
+
+@media (min-width: 768px) {
+  #papa {
+    max-width: 520px;
+  }
+
+  .firstH {
+    font-size: 2rem;
+  }
+}
+
+@media (max-height: 600px) {
+  html,
+  body {
+    overflow-y: auto;
+  }
+}
+
+footer p {
+  white-space: normal;
+  text-align: center;
+  padding: 0 12px;
+  font-size: clamp(0.75rem, 2.5vw, 0.9rem);
+}
+
+@media (max-width: 420px) {
+  .main .d-flex.justify-content-around {
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 16px;
+  }
+
+  button {
+    width: 100%;
+  }
+}

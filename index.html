@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best frirend Rohit</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+</head>
+
+<body class="container-fluid p-0">
+
+    <div id="app">
+
+        <nav>
+            <div class="d-flex justify-content-between align-items-center p-2 px-4">
+                <div class="m-0 d-flex justify-content-center align-items-center gap-2">
+                    <img src="/public/photos/bro.png" class="img-fluid"
+                        style="width: 32px; height: 32px;">
+                    <p class="ay m-0">BEST FRIENDS</p>
+                </div>
+
+                <div>
+                    <audio id="bgMusic" src="public/music/song.mp3" preload="auto" loop></audio>
+                    <button id="musicToggle" class="bg-transparent"></button>
+                </div>
+            </div>
+        </nav>
+
+        <section class="main d-flex flex-column p-0">
+            <div id="papa" class="text-center ">
+
+                <div id="gif"></div>
+
+                <h1 id="firstH" class="firstH my-3"></h1>
+
+                <h4 id="myName" class="myName text-end"></h4>
+
+                <div class="mt-5 d-flex justify-content-around px-5">
+                    <button id="y" class="btnPrimary rounded-pill" onclick="FirstYes()">Absolutely!</button>
+                    <button id="n" class="btnSecondary rounded-pill" onclick="FirstNo()">No</button>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="d-flex justify-content-start align-items-center p-2">
+            <div class="w-25">
+                <button id="themeToggle" class="bg-transparent"></button>
+            </div>
+
+            <div class="w-75 d-flex justify-content-center">
+                <p class="m-0 mnl">~ROHIT IS ONLY YOUR FRIEND~</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
