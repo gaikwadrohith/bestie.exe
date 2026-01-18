@@ -22,33 +22,34 @@ musicToggle.addEventListener("click", () => {
   isPlaying = !isPlaying;
 });
 
-
 const scenes = {
   initial: {
     gif: "public/gif/1.gif",
-    heading: "Tu mazi FRIEND bannar ki nahi?",
-    sub: "~Ho ROHIT chi best FRIEND",
+    heading: "Tu mazi FRIEND bannar na? 🥺💙",
+    sub: "~ Ho na… ROHIT chi forever wali bestie ✨",
   },
+
   yes: {
     gif: "public/gif/5.gif",
-    heading: "mala mahiti hot , tu mazi FRIEND bannshil.🤝💙",
-    sub: "you are my best FRIEND forever..!!",
+    heading: "Mala aadhi pasun mahiti hota 🫶",
+    sub: "Tu mazi FRIEND aahes… aani nehmi rahshil 🤝💙",
   },
+
   no: [
     {
       gif: "public/gif/2.gif",
-      heading: "v4 krun answer de!",
-      sub: "Itkya lwkr nahi nako manu na.",
+      heading: "Thamb zara… नीट v4 kar 🤨",
+      sub: "Itkya easily 'nahi' bolaycha nst 🫠",
     },
     {
       gif: "public/gif/3.gif",
-      heading: "Parat ekda v4 kr aa !!",
-      sub: "Ka as krt ahes RUSHALI.",
+      heading: "Parat ekda v4 kar na 😌",
+      sub: "Asa random decision gheun nahi chalat, RUSHALI 👀",
     },
     {
       gif: "public/gif/4.gif",
-      heading: "RUSH... kiti bhaw khashil sod na",
-      sub: "mahtiti ahe tu mazi FRIEND bannshil.",
+      heading: "RUSH Aata bas… bhav khaun zala na😤",
+      sub: "Mala mahiti ahe, tu mazi FRIEND bannar aahes 💙",
     },
   ],
 };
@@ -91,10 +92,7 @@ document.addEventListener("mousemove", (e) => {
   const centerX = rect.left + rect.width / 2;
   const centerY = rect.top + rect.height / 2;
 
-  const distance = Math.hypot(
-    e.clientX - centerX,
-    e.clientY - centerY
-  );
+  const distance = Math.hypot(e.clientX - centerX, e.clientY - centerY);
 
   if (distance < SAFE_DISTANCE) {
     moveButtonSmooth();
@@ -124,26 +122,66 @@ if (savedTheme === "dark") {
 
 document.body.classList.add("theme-ready");
 
-themeToggle.innerHTML = document.body.classList.contains("dark-theme")
-  ? '<i class="bi bi-sun-fill"></i>'
-  : '<i class="bi bi-moon-fill"></i>';
+themeToggle.innerHTML = document.body.classList.contains("dark-theme") ? '<i class="bi bi-sun-fill"></i>' : '<i class="bi bi-moon-fill"></i>';
 
 themeToggle.addEventListener("click", () => {
   const isDark = document.body.classList.toggle("dark-theme");
   localStorage.setItem("theme", isDark ? "dark" : "light");
-  themeToggle.innerHTML = isDark
-    ? '<i class="bi bi-sun-fill"></i>'
-    : '<i class="bi bi-moon-fill"></i>';
+  themeToggle.innerHTML = isDark ? '<i class="bi bi-sun-fill"></i>' : '<i class="bi bi-moon-fill"></i>';
 });
 
 window.addEventListener("load", () => {
-
-  const emojis = 
-  [ "🤝","🫂","💙","👯‍♂️","👯‍♀️","🫶","😎","😂","🥂","🔥",
-  "🧠","✨","🐐","💪","💫","🎉","😄","😁","🙌","🤗",
-  "🧡","💛","💚","💜","🩵","🩷","🤍","💖","💞","💓",
-  "🧸","🎈","🧩","🎮","🍕","☕","📸","🎶","🌈","⭐",
-  "😌","😜","😏","🤪","🥹","🫠","🫡","🫰","🫶"];
+  const emojis = [
+    "🤝",
+    "🫂",
+    "💙",
+    "👯‍♂️",
+    "👯‍♀️",
+    "🫶",
+    "😎",
+    "😂",
+    "🥂",
+    "🔥",
+    "🧠",
+    "✨",
+    "🐐",
+    "💪",
+    "💫",
+    "🎉",
+    "😄",
+    "😁",
+    "🙌",
+    "🤗",
+    "🧡",
+    "💛",
+    "💚",
+    "💜",
+    "🩵",
+    "🩷",
+    "🤍",
+    "💖",
+    "💞",
+    "💓",
+    "🧸",
+    "🎈",
+    "🧩",
+    "🎮",
+    "🍕",
+    "☕",
+    "📸",
+    "🎶",
+    "🌈",
+    "⭐",
+    "😌",
+    "😜",
+    "😏",
+    "🤪",
+    "🥹",
+    "🫠",
+    "🫡",
+    "🫰",
+    "🫶",
+  ];
 
   const emojiCount = 18;
   const elements = [];
@@ -165,12 +203,9 @@ window.addEventListener("load", () => {
     el.style.fontSize = rand(24, 56) + "px";
     el.style.willChange = "transform, filter, opacity";
 
-    el.style.filter =
-      "drop-shadow(0 0 10px rgba(255, 105, 180, 0.82))";
+    el.style.filter = "drop-shadow(0 0 10px rgba(255, 105, 180, 0.82))";
 
-    el.style.transition =
-      "transform 7s cubic-bezier(0.22, 1, 0.36, 1), " +
-      "font-size 7s ease, opacity 4s ease";
+    el.style.transition = "transform 7s cubic-bezier(0.22, 1, 0.36, 1), " + "font-size 7s ease, opacity 4s ease";
 
     document.body.appendChild(el);
     elements.push(el);
@@ -187,8 +222,7 @@ window.addEventListener("load", () => {
     el.style.opacity = rand(0.25, 0.45);
     el.style.fontSize = rand(22, 60) + "px";
 
-    el.style.transform =
-      `translate3d(${x}px, ${y}px, 0) rotate(${r}deg) scale(${s})`;
+    el.style.transform = `translate3d(${x}px, ${y}px, 0) rotate(${r}deg) scale(${s})`;
   }
 
   for (let i = 0; i < emojiCount; i++) {
@@ -198,5 +232,4 @@ window.addEventListener("load", () => {
   setInterval(() => {
     elements.forEach(moveEmoji);
   }, 5000);
-
 });
