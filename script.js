@@ -25,14 +25,14 @@ musicToggle.addEventListener("click", () => {
 const scenes = {
   initial: {
     gif: "public/gif/1.gif",
-    heading: "Tu mazi FRIEND bannar na? 🥺💙",
+    heading: "Tu mazi FRIEND bannar na? 🥺💖",
     sub: "~ Ho na… ROHIT chi forever wali bestie ✨",
   },
 
   yes: {
     gif: "public/gif/5.gif",
     heading: "Mala aadhi pasun mahiti hota 🫶",
-    sub: "Tu mazi FRIEND aahes… aani nehmi rahshil 🤝💙",
+    sub: "Tu mazi FRIEND aahes… aani nehmi shravanthi 🤝🔪",
   },
 
   no: [
@@ -44,11 +44,11 @@ const scenes = {
     {
       gif: "public/gif/3.gif",
       heading: "Parat ekda v4 kar na 😌",
-      sub: "Asa random decision gheun nahi chalat, RUSHALI 👀",
+      sub: "Asa random decision gheun nahi chalat, Shravanthi 👀",
     },
     {
       gif: "public/gif/4.gif",
-      heading: "RUSH Aata bas… bhav khaun zala na😤",
+      heading: "SHER Aata bas… bhav khaun zala na😤",
       sub: "Mala mahiti ahe, tu mazi FRIEND bannar aahes 💙",
     },
   ],
